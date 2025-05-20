@@ -21,10 +21,13 @@
   z-index: 999;
 }
 
+/* Modern logo style */
 .navbar-logo {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--blue-dark);
+  font-family: 'Poppins', 'Inter', sans-serif;
+  letter-spacing: 1px;
 }
 
 .navbar-links {
@@ -60,7 +63,7 @@
 }
 
 .btn-signup {
-  background: #007bff; /* blue */
+  background: #007bff;
   color: #fff;
 }
 
@@ -69,7 +72,7 @@
 }
 
 .btn-login {
-  background: #28a745; /* green */
+  background: #28a745;
   color: #fff;
 }
 
@@ -97,7 +100,7 @@
   text-decoration: none;
 }
 
-/* Hamburger toggle button - hidden on desktop */
+/* Hamburger toggle button */
 .navbar-toggle {
   display: none;
   font-size: 1.8rem;
@@ -106,16 +109,30 @@
   cursor: pointer;
   color: var(--text-dark);
   user-select: none;
+  margin-left: auto;
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  /* Hide nav links by default */
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-logo {
+    font-size: 1.2rem;
+    flex: 1;
+  }
+
+  .navbar-toggle {
+    display: block;
+    order: 2;
+  }
+
   .navbar-links {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px; /* Adjust to navbar height */
+    top: 60px;
     right: 20px;
     background: white;
     border: 1px solid var(--blue-light);
@@ -126,7 +143,6 @@
     width: 180px;
   }
 
-  /* Show nav links when menu open */
   .navbar-links.active {
     display: flex;
   }
@@ -135,13 +151,11 @@
     padding: 0.5rem 0;
   }
 
-  /* Show hamburger toggle */
-  .navbar-toggle {
-    display: block;
-  }
-
-  /* Adjust navbar-actions spacing on mobile */
   .navbar-actions {
     gap: 0.6rem;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+    order: 3;
   }
 }
