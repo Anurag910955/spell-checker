@@ -17,7 +17,7 @@ const About = () => {
       {/* Personal Introduction */}
       <section className="about-intro">
         <img
-          src="/assets/anuragsen.jpg"
+          src="/anuragsen.jpg"
           alt="Anurag Sen"
           className="about-image"
         />
