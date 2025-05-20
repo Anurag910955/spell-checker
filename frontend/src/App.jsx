@@ -12,7 +12,7 @@ import Home from './components/Home';
 import Registration from './components/registration';
 import ForgotPassword from './components/ForgotPassword';
 import Result from './components/Result';
-import About from './pages/About'; 
+import About from './components/About'; 
 
 // ✅ Wrapper to protect routes
 const ProtectedRoute = ({ element }) => {
