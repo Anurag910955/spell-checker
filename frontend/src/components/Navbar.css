@@ -1,104 +1,147 @@
 :root {
-    --blue-dark: #086788;
-    --blue-light: #07A0C3;
-    --yellow: #F0C808;
-    --off-white: #FFF1D0;
-    --red: #DD1C1A;
-    --text-dark: #1f2a36;
-  }
-  
-  .navbar {
-    width: 100%;
-    padding: 1rem 2rem;
-    background: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    font-family: 'Inter', sans-serif;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-  }
-  
-  .navbar-logo {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--text-dark);
-  }
-  
+  --blue-dark: #086788;
+  --blue-light: #07A0C3;
+  --yellow: #F0C808;
+  --off-white: #FFF1D0;
+  --red: #DD1C1A;
+  --text-dark: #1f2a36;
+}
+
+.navbar {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-family: 'Inter', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--blue-light);
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-signup {
+  background: #007bff; /* blue */
+  color: #fff;
+}
+
+.btn-signup:hover {
+  background: #005fcc;
+}
+
+.btn-login {
+  background: #28a745; /* green */
+  color: #fff;
+}
+
+.btn-login:hover {
+  background: #1e7e34;
+}
+
+.navbar-register-button {
+  background: linear-gradient(to right, var(--blue-dark), var(--blue-light));
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.navbar-register-button:hover {
+  background: linear-gradient(to right, var(--blue-light), var(--blue-dark));
+  box-shadow: 0 6px 15px rgba(8, 103, 136, 0.3);
+  text-decoration: none;
+}
+
+/* Hamburger toggle button - hidden on desktop */
+.navbar-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-dark);
+  user-select: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Hide nav links by default */
   .navbar-links {
-    display: flex;
-    gap: 1.8rem;
-  }
-  
-  .navbar-links a {
-    text-decoration: none;
-    color: var(--text-dark);
-    font-size: 1rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-links a:hover {
-    color: var(--blue-light);
-  }
-  
-  .navbar-actions {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .btn {
-    padding: 0.6rem 1.2rem;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust to navbar height */
+    right: 20px;
+    background: white;
+    border: 1px solid var(--blue-light);
     border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    transition: all 0.3s ease;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    width: 180px;
   }
-  
-  .btn-signup {
-    background: #007bff; /* blue */
-    color: #fff;
+
+  /* Show nav links when menu open */
+  .navbar-links.active {
+    display: flex;
   }
-  
-  .btn-signup:hover {
-    background: #005fcc;
+
+  .navbar-links a {
+    padding: 0.5rem 0;
   }
-  
-  .btn-login {
-    background: #28a745; /* green */
-    color: #fff;
+
+  /* Show hamburger toggle */
+  .navbar-toggle {
+    display: block;
   }
-  
-  .btn-login:hover {
-    background: #1e7e34;
+
+  /* Adjust navbar-actions spacing on mobile */
+  .navbar-actions {
+    gap: 0.6rem;
   }
-  
-  @media (max-width: 768px) {
-    .navbar-links {
-      display: none; /* You can later add a hamburger menu for mobile */
-    }
-  }
-  .navbar-register-button {
-    background: linear-gradient(to right, #086788, #07A0C3);
-    color: white;
-    border: none;
-    border-radius: 2rem;
-    padding: 0.5rem 1.2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-  }
-  
-  .navbar-register-button:hover {
-    background: linear-gradient(to right, #07A0C3, #086788);
-    box-shadow: 0 6px 15px rgba(8, 103, 136, 0.3);
-    text-decoration: none;
-  }
-  
+}
