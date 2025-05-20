@@ -44,9 +44,11 @@
   }
 }
 
-.about-image {
+about-image {
   width: 16rem;
   height: 16rem;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 50%;
   margin-top: 5%;
   object-fit: cover;
@@ -211,4 +213,10 @@
 
 .about-cta button:hover {
   background-color: #f3f4f6;
+}
+@media (max-width: 480px) {
+  .about-image {
+    width: 12rem;
+    height: 12rem;
+  }
 }
