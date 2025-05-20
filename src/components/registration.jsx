@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Registration.css';
+import './registration.css';
 import { register } from '../api/auth'; // Adjust path based on actual file location
 
 
