@@ -10,8 +10,13 @@ const app = express();
 // Connect to MongoDB
 connectDB();
 
+// ✅ CORS Configuration
+app.use(cors({
+  origin: "https://spell-checker-murex.vercel.app", // your actual frontend domain
+  credentials: true
+}));
+
 // Middlewares
-app.use(cors());
 app.use(express.json());
 
 // Routes
