@@ -45,21 +45,23 @@ const Registration = () => {
             required
           />
           <input
-            type="password"
-            placeholder="Password"
-            className="registration-input"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+  type="password"
+  placeholder="Password"
+  className="registration-input"
+  value={password}
+  onChange={(e) => setPassword(e.target.value)}
+  autoComplete="new-password"
+  required
+/>
           <input
-            type="password"
-            placeholder="Confirm Password"
-            className="registration-input"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-          />
+  type="password"
+  placeholder="Confirm Password"
+  className="registration-input"
+  value={confirmPassword}
+  onChange={(e) => setConfirmPassword(e.target.value)}
+  autoComplete="new-password"
+  required
+/>
           <button type="submit" className="registration-button">Register</button>
         </form>
         {message && <p className="registration-message">{message}</p>}

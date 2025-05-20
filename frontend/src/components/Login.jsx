@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
-import { login } from '../api/auth'; // Adjust path if needed
+import { login } from '../api/auth'; // Adjust if path differs
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -9,7 +9,7 @@ const Login = () => {
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
-  // Redirect if already logged in
+  // Redirect to home if already logged in
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
@@ -25,7 +25,7 @@ const Login = () => {
       const data = await login(email, password);
       localStorage.setItem('token', data.token); // Save token
       setMessage('Login successful!');
-      navigate('/'); // Redirect to home page
+      navigate('/');
     } catch (error) {
       if (error.response?.data?.message) {
         setMessage(error.response.data.message);
@@ -47,6 +47,7 @@ const Login = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            autoComplete="username"
           />
           <input
             type="password"
@@ -54,6 +55,7 @@ const Login = () => {
             className="login-input"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            autoComplete="current-password"
             required
           />
           <button type="submit" className="login-button">Log In</button>
@@ -62,7 +64,6 @@ const Login = () => {
         <p className="login-text">
           Don't have an account? <a href="/registration">Register</a>
         </p>
-        
       </div>
     </div>
   );
