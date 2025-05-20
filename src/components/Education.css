@@ -1,0 +1,59 @@
+.education-section {
+    background-color: #F0F3F5;
+    padding: 4rem 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .education-title {
+    color: #19535F;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  .education-list {
+    display: grid;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .education-card {
+    background-color: #ffffff;
+    border-left: 6px solid #0B7A75;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .education-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .education-card h3 {
+    color: #7B2D26;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .degree {
+    font-size: 1rem;
+    color: #0B7A75;
+    margin-bottom: 0.3rem;
+  }
+  
+  .year {
+    font-size: 0.9rem;
+    color: #D7C9AA;
+    display: block;
+    margin-bottom: 0.8rem;
+  }
+  
+  .description {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  

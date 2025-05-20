@@ -1,0 +1,45 @@
+.result-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .result-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .highlight-section, .corrections-section {
+    margin-bottom: 30px;
+  }
+  
+  .highlighted-text {
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+  }
+  
+  .error-text {
+    color: red;
+  }
+  
+  .corrections-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .corrections-list li {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  
+  .highlight {
+    background-color: #ffcc00; /* Yellow background */
+    color: black;
+    padding: 0 3px;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  

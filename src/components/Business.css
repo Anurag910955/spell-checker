@@ -1,0 +1,57 @@
+.business-container {
+    background-color: #F0F3F5;
+    padding: 4rem 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .business-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .business-header h1 {
+    color: #19535F;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .business-header p {
+    color: #0B7A75;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .business-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .business-card {
+    background-color: #D7C9AA;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 300px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .business-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  }
+  
+  .business-card h2 {
+    color: #7B2D26;
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .business-card p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  

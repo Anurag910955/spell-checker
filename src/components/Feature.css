@@ -1,0 +1,60 @@
+.feature-container {
+    padding: 4rem 2rem;
+    background: linear-gradient(180deg, #FFF1D0, #F0C808);
+    min-height: 100vh;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .feature-title {
+    font-size: 3rem;
+    color: #086788;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-subtitle {
+    font-size: 1.25rem;
+    color: #444;
+    margin-bottom: 2rem;
+  }
+  
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+    border-left: 6px solid #07A0C3;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    border-left-color: #DD1C1A;
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #07A0C3;
+  }
+  
+  .feature-heading {
+    font-size: 1.5rem;
+    color: #086788;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-description {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  

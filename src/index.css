@@ -1,0 +1,43 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+/* Fullscreen flex center */
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: #fee2e2; /* Tailwind's red-100 */
+}
+
+/* Form wrapper */
+.login-box {
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid #ef4444; /* red-500 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form layout */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Email input */
+.login-input-email {
+  width: 16rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 2px solid #dc2626; /* red-600 */
+}
+
+/* Password input */
+.login-input-password {
+  width: 16rem
+}
