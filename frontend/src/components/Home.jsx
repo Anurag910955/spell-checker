@@ -14,7 +14,6 @@ const Home = () => {
   const chooseInputRef = useRef(null);
   const navigate = useNavigate();
 
-  // ✅ Redirect to login if not authenticated
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (!token) {
@@ -47,18 +46,33 @@ const Home = () => {
     setText('');
   };
 
-  const handleSubmit = () => {
+  const checkSpelling = async () => {
     if (text.trim() === '') {
       alert('Please enter or upload some text!');
       return;
     }
-    navigate('/result', { state: { text } });
+
+    try {
+      const res = await fetch('https://api.languagetoolplus.com/v2/check', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          text: text,
+          language: 'en-US',
+        }),
+      });
+
+      const data = await res.json();
+      navigate('/result', { state: { text, matches: data.matches } });
+    } catch (err) {
+      console.error('Spell check failed:', err);
+      alert('Error checking spelling.');
+    }
   };
 
   const processFile = (file) => {
     setFileName(file.name);
     const extension = file.name.split('.').pop().toLowerCase();
-
     const reader = new FileReader();
 
     switch (extension) {
@@ -129,7 +143,7 @@ const Home = () => {
         </div>
 
         <div className="button-row">
-          <button className="common-btn" onClick={handleSubmit}>Submit</button>
+          <button className="common-btn" onClick={checkSpelling}>Submit</button>
           <button className="common-btn" onClick={handleChooseClick}>Choose File</button>
           <input
             type="file"
@@ -151,7 +165,7 @@ const Home = () => {
 
       <div className="button-group">
         <button className="common-btn" onClick={handleRefresh}>Refresh</button>
-        <button className="common-btn" onClick={handleSubmit}>Submit</button>
+        <button className="common-btn" onClick={checkSpelling}>Submit</button>
       </div>
     </div>
   );
