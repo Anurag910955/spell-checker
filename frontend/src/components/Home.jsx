@@ -124,7 +124,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <h1 className="home-heading">Upload your text or write</h1>
+      <h1 className="home-heading">Upload your screenshot of the text 📸✨  </h1>
 
       <div className="upload-section">
         <div
